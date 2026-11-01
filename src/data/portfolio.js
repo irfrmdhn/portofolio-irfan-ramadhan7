@@ -20,7 +20,7 @@ export const portfolio = {
     personalDescription: 'Saya adalah pribadi yang adaptif, bertanggung jawab, terbuka terhadap tantangan baru, dan senang mempelajari hal-hal baru. Saya terus berupaya menghasilkan karya yang menarik secara visual sekaligus memberikan manfaat.',
     heroTagline: 'Creative Thinking. Solving Digital Problems.',
     heroDescription: 'Saya merangkai ide menjadi visual dan pengalaman digital melalui desain grafis, fotografi, penyuntingan, serta UI/UX.',
-    resumeUrl: '', // Contoh: '/resume/irfan-ramadhan-cv.pdf'
+    resumeUrl: '/CV.pdf',
   },
   contact: {
     email: 'ramadhanirfan223@gmail.com', 
