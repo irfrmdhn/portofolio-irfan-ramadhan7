@@ -18,7 +18,7 @@ export default function Contact() {
   return <section className="page-section contact-section" id="contact">
     <div className="section-container contact-grid">
       <div className="contact-copy reveal"><span className="eyebrow">HUBUNGI SAYA</span><h2>MARI<br/>BEKERJA<br/>SAMA<span className="heading-period">.</span></h2><h3>Siap menghadapi tantangan berikutnya.</h3><p>Saya terbuka untuk peluang baru, kolaborasi kreatif, dan proyek yang membutuhkan kemampuan saya di bidang desain, teknologi, dan kreativitas digital.</p>
-      {identity.resumeUrl ? <a className="solid-pill" href={identity.resumeUrl} target="_blank" rel="noopener noreferrer">UNDUH CV <Download size={15}/></a> : <span className="resume-unavailable"><Download size={14}/> UNDUH CV — BELUM TERSEDIA</span>}</div>
+      {identity.resumeUrl ? <a className="solid-pill" href={identity.resumeUrl} download="CV-Irfan-Ramadhan.pdf">UNDUH CV <Download size={15}/></a> : <span className="resume-unavailable"><Download size={14}/> UNDUH CV — BELUM TERSEDIA</span>}</div>
       <div className="contact-info reveal">
         {contactEntries.map((entry,i) => {
           const value = contact[entry.key]

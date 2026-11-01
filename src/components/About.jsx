@@ -22,7 +22,7 @@ export default function About() {
           <p>{identity.description}</p>
           <p>{identity.experienceDescription}</p>
           <p>{identity.personalDescription}</p>
-          <p className="resume-line">Ingin tahu lebih lanjut? {identity.resumeUrl ? <a href={identity.resumeUrl} target="_blank" rel="noopener noreferrer">Unduh CV saya <ArrowUpRight size={14}/></a> : <span className="muted">CV dapat ditambahkan pada konfigurasi.</span>}</p>
+          <p className="resume-line">Ingin tahu lebih lanjut? {identity.resumeUrl ? <a href={identity.resumeUrl} download="CV-Irfan-Ramadhan.pdf">Unduh CV saya <ArrowUpRight size={14}/></a> : <span className="muted">CV dapat ditambahkan pada konfigurasi.</span>}</p>
         </div>
       </div>
       <div className="about-bottom">
