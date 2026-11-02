@@ -19,21 +19,33 @@ export default function Navbar({ theme, onToggleTheme }) {
   useEffect(() => setOpen(false), [location.pathname, location.hash])
   useEffect(() => {
     if (location.pathname === '/work') { setActive('work'); return }
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => { if (entry.isIntersecting) setActive(entry.target.id) })
-    }, { rootMargin: '-23% 0px -62% 0px' })
     const sections = ['work','skills','about','awards','trainings','contact']
-    sections.forEach(id => { const section = document.getElementById(id); if (section) observer.observe(section) })
-    return () => observer.disconnect()
+    let frame = 0
+    const updateActive = () => {
+      frame = 0
+      const offset = parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop) || 0
+      const marker = offset + 40
+      let current = ''
+      for (const id of sections) {
+        const section = document.getElementById(id)
+        if (section && section.getBoundingClientRect().top <= marker) current = id
+      }
+      setActive(current)
+    }
+    const scheduleUpdate = () => {
+      if (!frame) frame = requestAnimationFrame(updateActive)
+    }
+    updateActive()
+    window.addEventListener('scroll', scheduleUpdate, { passive: true })
+    window.addEventListener('resize', scheduleUpdate)
+    return () => {
+      cancelAnimationFrame(frame)
+      window.removeEventListener('scroll', scheduleUpdate)
+      window.removeEventListener('resize', scheduleUpdate)
+    }
   }, [location.pathname])
 
-  const goTo = id => {
-    setOpen(false)
-    if (location.pathname === '/') {
-      const section = document.getElementById(id)
-      if (section) section.scrollIntoView({ behavior: 'smooth', block: 'start' })
-    }
-  }
+  const goTo = () => setOpen(false)
 
   return <>
     <div className="navbar-backdrop" aria-hidden="true" />

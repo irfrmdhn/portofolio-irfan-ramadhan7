@@ -12,7 +12,7 @@ const getInitialTheme = () => {
 }
 
 function ScrollManager() {
-  const { pathname, hash } = useLocation()
+  const { pathname, hash, key } = useLocation()
   useEffect(() => {
     let frame = 0
     if (hash) {
@@ -24,7 +24,7 @@ function ScrollManager() {
       window.scrollTo(0, 0)
     }
     return () => cancelAnimationFrame(frame)
-  }, [pathname, hash])
+  }, [pathname, hash, key])
   return null
 }
 
