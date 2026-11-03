@@ -16,7 +16,7 @@ export default function WorkGallery() {
     <section className="section-container gallery-technical" aria-labelledby="technical-title">
       <div className="gallery-category-header"><div><span className="eyebrow">01 / PENGEMBANGAN</span><h2 id="technical-title">Teknis<span className="heading-period">.</span></h2></div><Code2 size={30} strokeWidth={1}/></div>
       <div className="technical-list">
-        {technical.map((project,i) => <article className="technical-item reveal" key={project.id}><div className="technical-number">{String(i+1).padStart(2,'0')}</div><div className="technical-main"><h3>{project.title}</h3><p>{project.description}</p><div className="tag-list">{project.tools.map(tool => <span key={tool}>{tool}</span>)}</div></div>{project.link ? <a href={project.link} target="_blank" rel="noopener noreferrer" aria-label={`Lihat ${project.title}`}><ArrowUpRight/></a> : <span className="technical-pending">TAUTAN BELUM ADA</span>}</article>)}
+        {technical.map((project,i) => <article className="technical-item reveal" key={project.id}><div className="technical-number">{String(i+1).padStart(2,'0')}</div><div className="technical-main">{project.image && <img className="technical-image" loading="lazy" src={project.image} alt={`Visual proyek ${project.title}`}/>}<h3>{project.title}</h3><p>{project.description}</p><div className="tag-list">{project.tools.map(tool => <span key={tool}>{tool}</span>)}</div></div>{project.link ? <a href={project.link} target="_blank" rel="noopener noreferrer" aria-label={`Lihat ${project.title}`}><ArrowUpRight/></a> : <span className="technical-pending">TAUTAN BELUM ADA</span>}</article>)}
       </div>
     </section>
     <section className="section-container gallery-digital" aria-labelledby="digital-title">
