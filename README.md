@@ -1,8 +1,6 @@
 # IRFAN RAMADHAN — PERSONAL PORTFOLIO
 
-Website personal portfolio dibuat dengan **React.js + Vite + CSS + Lucide React**, mengacu pada rekaman visual portfolio Richard Miculob yang diberikan dalam percakapan.
-
-> Catatan desain: URL `https://richardmiculob-portfolio.vercel.app/` tidak dapat diakses langsung dari lingkungan pembuatan. Komposisi visual didasarkan pada rekaman referensi yang sebelumnya diberikan, bukan klaim pixel-perfect terhadap website live.
+Website personal portfolio dibuat dengan **React.js + Vite + CSS + Lucide React**
 
 ## 1. Cara menjalankan di Windows (VS Code)
 
