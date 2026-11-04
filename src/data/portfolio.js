@@ -23,6 +23,7 @@ export const portfolio = {
     resumeUrl: '/CV.pdf',
   },
   contact: {
+    whatsapp: 'https://wa.me/+6285156079284',
     email: 'ramadhanirfan223@gmail.com', 
     instagram: 'https://instagram.com/irfrmdhz', // contoh ''
     linkedin: 'https://www.linkedin.com/in/irfan-ramadhan-496bb73ba?utm_source=share_via&utm_content=profile&utm_medium=member_android', // contoh 'https://linkedin.com/in/username'

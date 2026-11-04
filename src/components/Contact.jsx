@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { ArrowUpRight, Download, Mail, Github, Linkedin, Instagram } from 'lucide-react'
+import { ArrowUpRight, Download, Mail, Github, Linkedin, Instagram, MessageCircle } from 'lucide-react'
 import { portfolio } from '../data/portfolio.js'
 
 const contactEntries = [
@@ -7,6 +7,7 @@ const contactEntries = [
   { label:'INSTAGRAM', key:'instagram', icon:Instagram },
   { label:'LINKEDIN', key:'linkedin', icon:Linkedin },
   { label:'GITHUB', key:'github', icon:Github },
+  { label:'WHATSAPP', key:'whatsapp', icon:MessageCircle },
 ]
 export default function Contact() {
   const { contact, identity } = portfolio
